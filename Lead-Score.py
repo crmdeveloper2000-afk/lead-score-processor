@@ -1705,7 +1705,7 @@ def create_score_breakdown_chart(payload, logger):
                            bbox=dict(boxstyle="circle,pad=0.2", facecolor='white', alpha=0.8))
                     
                     current_y -= 0.06
-                
+
                 current_y -= 0.02  # Extra space after each domain
         
         # RIGHT SIDE: Horizontal Score Progression Chart
