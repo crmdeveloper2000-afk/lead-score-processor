@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: lead-score-processor
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn Lead-Score:app
+    healthCheckPath: /
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.9.0
+      - key: ZOHO_REFRESH_TOKEN
+        sync: false
+      - key: ZOHO_CLIENT_ID
+        sync: false
+      - key: ZOHO_CLIENT_SECRET
+        sync: false
+      - key: TEMPLATE_DOWNLOAD_URL
+        sync: false
